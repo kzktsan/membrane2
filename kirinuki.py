@@ -29,6 +29,6 @@ for y in range(755, 1011):
 		if (img[y, x, 2] > 200 and img[y, x, 1] < 100 and img[y, x, 0] <100):
 			if (y - half >= 0 and y + half < height and x - half >= 0 and x + half < width):
 				copy = img2[y - half : y + half +1 , x - half : x + half +1]
-				cv2.imwrite("/Users/satokazuki/Desktop/zikken1/" + str(x) + "_"+str(y)+ ".png", copy)
+				cv2.imwrite("/Users/satokazuki/Desktop/zikken2/" + str(x) + "_"+str(y)+ ".png", copy)
 				count = count + 1
 print(count)

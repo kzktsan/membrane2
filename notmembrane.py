@@ -27,10 +27,10 @@ while count < 100000:
 
 for y in range(755, 1011):
 	for x in range(130, 386):
-		if not(img[y, x, 2] > 190 and img[y, x, 1] < 100 and img[y, x, 0] <100):
+		if not(img[y, x, 2] > 200 and img[y, x, 1] < 100 and img[y, x, 0] <100):
 			if (y - half >= 0 and y + half < height and x - half >= 0 and x + half < width):
 				copy = img2[y - half : y + half +1 , x - half : x + half +1]
-				cv2.imwrite("/Users/satokazuki/Desktop/zikken1_non/" + str(x) + "_"+str(y)+ "_not.png", copy)
+				cv2.imwrite("/Users/satokazuki/Desktop/zikken2_non/" + str(x) + "_"+str(y)+ "_not.png", copy)
 				count = count + 1
 
 print(count)
