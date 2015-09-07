@@ -3,7 +3,7 @@ import numpy as np
 
 #img = cv2.imread("/Users/satokazuki/Desktop/lined2.jpg")
 #img2 = cv2.imread("/Users/satokazuki/Desktop/ori.jpg")
-img = cv2.imread("image/lined2.jpg")
+img = cv2.imread("image/lined3.jpg")
 img2 = cv2.imread("image/ori.jpg", 0)
 #length = 64
 length = 254
