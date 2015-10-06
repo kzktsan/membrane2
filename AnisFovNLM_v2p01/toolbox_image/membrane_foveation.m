@@ -1,8 +1,10 @@
-D = dir('/Users/satokazuki/Desktop/zikken2/zikken2_non/*png')
-addpath('/Users/satokazuki/Desktop/zikken2/zikken2_non');
+D = dir('/Users/satokazuki/Desktop/zikken4/zikken4_cellmem/*png')
+addpath('/Users/satokazuki/Desktop/zikken4/zikken4_cellmem');
 n = 256;
-m = 15; %width of filters
-p = 15; % number of filters
+%m = 15; %width of filters
+%p = 15; % number of filters
+m = 41;
+p = 10;
 sigma = linspace(0.05,10,p);
 H = zeros(m,m,p);
 for i=1:p
@@ -19,6 +21,6 @@ for k=1:length(D)
     %imageplot(M);
     M1 = perform_adaptive_filtering(M,H,I);
     M2 = uint8(M1);
-    save_name = strcat('/Users/satokazuki/Desktop/zikken2_fov/zikken2_fovnon/',image_name(1),'.png');
+    save_name = strcat('/Users/satokazuki/Desktop/zikken4fov/zikken4fov_cellmem/',image_name(1),'.png');
     imwrite(M2, char(save_name));
 end
